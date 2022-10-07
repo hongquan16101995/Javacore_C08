@@ -1,3 +1,5 @@
+package bai1;
+
 import java.util.Scanner;
 
 //khởi tạo 1 lớp trong Java, tên lớp cùng tên với file chứa nó
