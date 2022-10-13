@@ -1,4 +1,4 @@
-package bai6;
+package bai6_1;
 
 //từ khóa extends dùng để xác định kế thừa trong Java
 public class Dog extends Animal{

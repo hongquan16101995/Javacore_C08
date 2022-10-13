@@ -1,4 +1,4 @@
-package bai6;
+package bai6_1;
 
 public class Animal {
     private String name;

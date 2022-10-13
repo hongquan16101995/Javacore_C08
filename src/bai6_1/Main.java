@@ -1,6 +1,4 @@
-package bai6;
-
-import bai2.A;
+package bai6_1;
 
 public class Main {
     public static void main(String[] args) {
