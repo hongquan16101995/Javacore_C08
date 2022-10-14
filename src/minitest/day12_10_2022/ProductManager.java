@@ -10,16 +10,7 @@ public class ProductManager {
     }
 
     public void addProduct(Scanner scanner) {
-        System.out.println("Nhập thông tin của sản phẩm: ");
-        System.out.println("Nhập tên sản phẩm mới: ");
-        String name = scanner.nextLine();
-        System.out.println("Nhập giá sản phẩm mới: ");
-        //Double.parseDouble(String): chuyển giá trị chuỗi về thành dạng số tương ứng nếu dữ liệu là số
-        double price = Double.parseDouble(scanner.nextLine());
-        System.out.println("Nhập mô tả sản phẩm mới: ");
-        String description = scanner.nextLine();
-        //tạo 1 sản phẩm mới theo thông tin người dùng nhập
-        Product product = new Product(name, price, description);
+        Product product = getProduct(scanner);
         //tạo 1 mảng sản phẩm mới có độ dài + 1 so với mảng có sẵn
         Product[] newProducts = new Product[products.length + 1];
         //chuyển các phần tử của mảng có sẵn sang mảng mới
@@ -32,6 +23,19 @@ public class ProductManager {
         products = newProducts;
         System.out.println("Tạo mới thành công!");
         System.out.println(product);
+    }
+
+    public Product getProduct(Scanner scanner) {
+        System.out.println("Nhập thông tin của sản phẩm: ");
+        System.out.println("Nhập tên sản phẩm mới: ");
+        String name = scanner.nextLine();
+        System.out.println("Nhập giá sản phẩm mới: ");
+        //Double.parseDouble(String): chuyển giá trị chuỗi về thành dạng số tương ứng nếu dữ liệu là số
+        double price = Double.parseDouble(scanner.nextLine());
+        System.out.println("Nhập mô tả sản phẩm mới: ");
+        String description = scanner.nextLine();
+        //tạo 1 sản phẩm mới theo thông tin người dùng nhập
+        return new Product(name, price, description);
     }
 
     public void updateProduct(Scanner scanner) {
@@ -75,7 +79,8 @@ public class ProductManager {
     }
 
     public void displayProduct() {
-        if (products.length > 0) {
+        boolean check = products.length > 0;
+        if (check) {
             System.out.println("Danh sách sản phẩm hiện có là: ");
             for (Product p : products) {
                 System.out.println(p.toString());
