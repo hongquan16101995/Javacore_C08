@@ -1,4 +1,4 @@
-package bai10;
+package bai10.arraylist;
 
 import java.util.ArrayList;
 

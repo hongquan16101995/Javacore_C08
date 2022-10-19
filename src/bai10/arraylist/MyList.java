@@ -1,4 +1,4 @@
-package bai10;
+package bai10.arraylist;
 
 public class MyList<E> {
     private int size = 0;

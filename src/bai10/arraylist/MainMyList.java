@@ -1,6 +1,4 @@
-package bai10;
-
-import java.util.ArrayList;
+package bai10.arraylist;
 
 public class MainMyList {
     public static void main(String[] args) {
