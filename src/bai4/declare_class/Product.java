@@ -1,5 +1,7 @@
 package bai4.declare_class;
 
+import java.util.Arrays;
+
 public class Product {
     //UML: sơ đồ lớp, mô tả của lớp trước khi khởi tạo. biểu diễn bằng HCN
     //Gồm 3 phần:
@@ -52,5 +54,13 @@ public class Product {
 
     public void setNames(String[] names) {
         this.names = names;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

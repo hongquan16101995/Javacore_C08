@@ -1,5 +1,8 @@
 package minitest.book;
 
+import bai2.A;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BookSystem {
@@ -28,8 +31,17 @@ public class BookSystem {
                 case 1:
                     menuCreateBook();
                     break;
+                case 2:
+                    bookManager.sumPrice();
+                    break;
                 case 3:
-                    bookManager.countProgrammingJava();
+                    bookManager.countProgrammingBookByLanguage();
+                    break;
+                case 4:
+                    bookManager.countFictionBookByCategory();
+                    break;
+                case 5:
+                    bookManager.countFictionBookByPrice();
                     break;
                 case 6:
                     bookManager.display();

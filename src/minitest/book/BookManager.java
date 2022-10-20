@@ -38,7 +38,7 @@ public class BookManager {
         }
     }
 
-    public void countProgrammingJava() {
+    public void countProgrammingBookByLanguage() {
         int count = 0;
         for (Book book : books) {
             if (book instanceof ProgrammingBook) {
@@ -48,6 +48,38 @@ public class BookManager {
             }
         }
         System.out.println("Số sách lập trình có ngôn ngữ Java là: " + count);
+    }
+
+    public void countFictionBookByCategory() {
+        int count = 0;
+        for (Book book : books) {
+            if (book instanceof FictionBook) {
+                if (((FictionBook) book).getCategory().equals("Viễn tưởng 1")) {
+                    count++;
+                }
+            }
+        }
+        System.out.println("Số sách giả tưởng có thể loại Viễn tưởng 1 là: " + count);
+    }
+
+    public void countFictionBookByPrice() {
+        int count = 0;
+        for (Book book : books) {
+            if (book instanceof FictionBook) {
+                if (book.getPrice() < 100) {
+                    count++;
+                }
+            }
+        }
+        System.out.println("Số sách giả tưởng có giá <100 là: " + count);
+    }
+
+    public void sumPrice() {
+        double sumPrice = 0;
+        for (Book book : books) {
+            sumPrice += book.getPrice();
+        }
+        System.out.println("Tổng giá tiền sách là: " + sumPrice);
     }
 
     public void display() {
