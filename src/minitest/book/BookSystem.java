@@ -64,7 +64,7 @@ public class BookSystem {
             if (choice2 == 0) {
                 break;
             }
-            bookManager.addBook(choice2, scanner);
+            bookManager.add(choice2, scanner);
         } while (true);
     }
 }

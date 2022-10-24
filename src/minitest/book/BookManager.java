@@ -1,16 +1,19 @@
 package minitest.book;
 
+import minitest.ICRUDManager;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class BookManager {
+public class BookManager implements ICRUDManager<Book> {
     private final ArrayList<Book> books;
 
     public BookManager() {
         books = new ArrayList<>();
     }
 
-    public void addBook(int choice, Scanner scanner) {
+    @Override
+    public void add(int choice, Scanner scanner) {
         if (choice < 1 || choice > 3) {
             System.out.println("Lựa chọn không phù hợp, mời nhập lại!");
         } else {
@@ -82,6 +85,17 @@ public class BookManager {
         System.out.println("Tổng giá tiền sách là: " + sumPrice);
     }
 
+    @Override
+    public void update(Scanner scanner) {
+
+    }
+
+    @Override
+    public void delete(int index) {
+
+    }
+
+    @Override
     public void display() {
         for (Book book : books) {
             System.out.println(book);
