@@ -144,6 +144,35 @@ public class MaterialManager {
         }
     }
 
+    public void writeBinaryFile() {
+        File file = new File("src/minitest/material/file/binary");
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file));
+            objectOutputStream.writeObject(materials);
+            objectOutputStream.close();
+        } catch (IOException e) {
+            System.out.println();
+        }
+    }
+
+    public void readBinaryFile() {
+        File file = new File("src/minitest/material/file/binary");
+        ArrayList<Material> materialsArray = new ArrayList<>();
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(file));
+            Object object;
+            while ((object = objectInputStream.readObject()) != null) {
+                materialsArray = (ArrayList<Material>) object;
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+        materials = materialsArray;
+    }
+
     public void writeFile() {
         File file1 = new File("src/minitest/material/file/meat.csv");
         File file2 = new File("src/minitest/material/file/flour.csv");

@@ -43,6 +43,12 @@ public class Main {
                 case 22:
                     manager.readFile();
                     break;
+                case 33:
+                    manager.writeBinaryFile();
+                    break;
+                case 44:
+                    manager.readBinaryFile();
+                    break;
                 case 0:
                     System.exit(0);
             }
