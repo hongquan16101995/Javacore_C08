@@ -1,4 +1,4 @@
-package minitest.material;
+package minitest.book.material;
 
 public class Test {
     public static void main(String[] args) {

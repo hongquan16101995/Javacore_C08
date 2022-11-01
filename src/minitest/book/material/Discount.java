@@ -1,4 +1,4 @@
-package minitest.material;
+package minitest.book.material;
 
 public interface Discount {
     double getRealMoney();

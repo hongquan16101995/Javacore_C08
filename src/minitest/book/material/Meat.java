@@ -1,4 +1,4 @@
-package minitest.material;
+package minitest.book.material;
 
 import java.io.Serializable;
 import java.time.LocalDate;
