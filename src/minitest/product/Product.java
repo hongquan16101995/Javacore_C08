@@ -3,7 +3,7 @@ package minitest.product;
 import java.io.Serializable;
 
 public class Product implements Serializable {
-    private static int INDEX = 0;
+    public static Long INDEX = Long.valueOf(0);
     private Long id;
     private String name;
     private Double price;

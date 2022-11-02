@@ -10,6 +10,7 @@ public class ProductManager {
 
     public ProductManager() {
         products = readFile();
+        resetStaticIndex();
     }
 
     public void add(ArrayList<Category> categories, Scanner scanner) {
@@ -210,5 +211,11 @@ public class ProductManager {
             System.err.println(e.getMessage());
         }
         return productsArray;
+    }
+
+    private void resetStaticIndex() {
+        if (!products.isEmpty()){
+            Product.INDEX = products.get(products.size() - 1).getId();
+        }
     }
 }
